@@ -27,7 +27,7 @@ body {
 /* Desktop Navbar */
 
 #desktop-navbar{
-    overflow: hidden;
+    overflow: none;
     height: 15vh;
     box-shadow: 0px 1px 3px 0.5px rgba(0,0,0,0.1);
     display: flex;
@@ -35,7 +35,7 @@ body {
     align-items: center;
     gap: 10rem;
     max-width: 1920px;
-    width: 100vw;
+    width: 100%;
     position: fixed;
     top: 0;
 }
@@ -104,3 +104,38 @@ color: rgb(0, 119, 255);
     font-size: 20px;
 }
 
+#menuDropdown {
+    display : none;
+}
+.menu-lists {
+    background-color: white;
+    position: absolute;
+    top: 15vh;
+    width: 50%;
+    height: 50vh;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+    flex-direction: column;
+    justify-content:space-evenly;
+}
+.menu-lists a {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    float: none;
+    padding: 20px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.menu-lists a:last-child {
+    font-weight: 600;
+    transition: all 0.5s cubic-bezier(.7,1.4,.61,.75);
+}
+.menu-lists a:hover {
+    background-color: rgb(0, 119, 255);
+    color: white;
+}
+.menu-lists a:last-child:hover {
+    background-color: white;
+    color: rgb(255, 196, 0);
+    letter-spacing: 0.2rem;
+}

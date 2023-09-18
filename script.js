@@ -1,15 +1,17 @@
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
-function dropDownMenu() {
-    document.getElementById("dropdown-menu-content").classList.toggle("show");
+function toggleDropdownMenu() {
+  let x = document.getElementById("menuDropdown");
+  if (x.style.display === "" || x.style.display === "none") {
+    x.style.display = "flex";
+  } else {
+    x.style.display = "none";
   }
-  
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(e) {
-    if (!e.target.matches('.menu-button')) {
-    var Dropdown = document.getElementById("dropdown-menu-content");
-      if (Dropdown.classList.contains('show')) {
-        Dropdown.classList.remove('show');
-      }
-    }
+}
+
+document.body.addEventListener("click", function (event) {
+  let x = document.getElementById("menuDropdown");
+  if (x.style.display === "flex" && !x.contains(event.target)) {
+    console.log('yes');
   }
+});
