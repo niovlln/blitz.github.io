@@ -16,3 +16,11 @@ document.body.addEventListener("click", function (event) {
     x.style.display = "";
   }
 });
+
+
+function toggleHamburgerMenu() {
+  let icons = document.querySelectorAll('.icon');
+  icons.forEach (icon => {  
+      icon.classList.toggle("open");
+  })
+}

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-        <nav id="desktop-navbar">
+        <nav id="desktop-navbar" style="display: none;">
             <div class="logo">Mr.Blitz<span style="font-size: 1rem;" >&#174;</span></div>
             <div class="menu-button" onclick="toggleDropdownMenu()">
                 <a href="#">Menu</a>
@@ -35,5 +35,27 @@
                 <a href="#">Locations</a>
             </div>
         </nav>
+
+        <nav id="mobile-navbar">
+            <div class="logo">Mr.Blitz<span style="font-size: 1rem;" >&#174;</span></div>
+        </nav>
+        <nav id="mobile-footbar">
+            <div class="icon-btn" onclick="toggleHamburgerMenu()">
+                <div class="icon nav-icon-5" >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+              </div>
+            </div>
+            <div class="hamburger-menu-lists">
+                <div class="hamburger-menu-wrapper">
+                    <a href="#" >Menu <i class="fa-solid fa-chevron-right"></i> </a>
+                    <a href="#" >Promotions <i class="fa-solid fa-chevron-right"></i></a>
+                    <a href="#" >Contact <i class="fa-solid fa-chevron-right"></i></a>
+                    <a href="#" >Location <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </nav>
+        
 </body>
 </html>
