@@ -11,7 +11,8 @@ function toggleDropdownMenu() {
 
 document.body.addEventListener("click", function (event) {
   let x = document.getElementById("menuDropdown");
-  if (x.style.display === "flex" && !x.contains(event.target)) {
-    console.log('yes');
+  let button = document.getElementsByClassName("menu-button")[0]; // button untuk toggle menuDropDown
+  if (x.style.display === "flex" && !x.contains(event.target) && !button.contains(event.target)) {
+    x.style.display = "";
   }
 });
