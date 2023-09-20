@@ -16,3 +16,13 @@
         display: flex;
     }
 }
+
+@media screen and (max-width: 400px) {
+    #desktop-navbar {
+        display: none;
+    }
+    #mobile-navbar , #mobile-footbar {
+        display: flex;
+    }
+
+}

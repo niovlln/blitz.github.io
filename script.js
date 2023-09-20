@@ -23,10 +23,8 @@ function toggleHamburgerMenu() {
   let x = document.getElementsByClassName("hamburger-menu-lists")[0];
   if (x.style.display === "" || x.style.display === "none") {
     x.style.display = "flex";
-    console.log('yes');
   } else {
     x.style.display = "none";
-    console.log('no');
   }
 
   icons.forEach (icon => {  
