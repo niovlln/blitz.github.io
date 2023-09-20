@@ -20,7 +20,19 @@ document.body.addEventListener("click", function (event) {
 
 function toggleHamburgerMenu() {
   let icons = document.querySelectorAll('.icon');
+  let x = document.getElementsByClassName("hamburger-menu-lists")[0];
+  if (x.style.display === "" || x.style.display === "none") {
+    x.style.display = "flex";
+    console.log('yes');
+  } else {
+    x.style.display = "none";
+    console.log('no');
+  }
+
   icons.forEach (icon => {  
-      icon.classList.toggle("open");
+    icon.classList.toggle("open");
   })
-}
+
+  }
+
+  
