@@ -6,6 +6,10 @@
     #mobile-navbar , #mobile-footbar {
         display: flex;
     }
+    .slider img {
+        height: 400px;
+        width: calc(100% / 2);
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -14,6 +18,21 @@
     }
     #mobile-navbar , #mobile-footbar {
         display: flex;
+    }
+
+
+    #contentOne {
+        top: 0vh;
+    }#contentTwo {
+        margin-top: 0;
+    }
+    .slider img {
+        height: 400px;
+        width: 100%;
+    }
+
+    .horizontal-lines {
+        width: 90%;
     }
 }
 

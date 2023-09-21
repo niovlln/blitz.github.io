@@ -1,4 +1,7 @@
-const carousel = document.querySelector(".slider")
+const carousel = document.querySelector(".slider"),
+firstImg = carousel.querySelectorAll(".slider img")[0],
+arrowIcons = document.querySelectorAll(".slider-container i");
+
 let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
 
 
@@ -17,6 +20,7 @@ const dragging = (e) => {
     carousel.classList.add("dragging");
     positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
     carousel.scrollLeft = prevScrollLeft - positionDiff;
+    showHideIcons();
 }
 
 const dragStop = () => {
@@ -25,6 +29,38 @@ const dragStop = () => {
 
     if(!isDragging) return;
     isDragging = false;
+}
+
+const autoSlide = () => {
+    // if there is no image left to scroll then return from here
+    if(carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 || carousel.scrollLeft <= 0) return;
+
+    positionDiff = Math.abs(positionDiff); // making positionDiff value to positive
+    let firstImgWidth = firstImg.clientWidth + 16;
+    // getting difference value that needs to add or reduce from carousel left to take middle img center
+    let valDifference = firstImgWidth - positionDiff;
+
+    if(carousel.scrollLeft > prevScrollLeft) { // if user is scrolling to the right
+        return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+    }
+    // if user is scrolling to the left
+    carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+}
+
+arrowIcons.forEach(icon => {
+    icon.addEventListener("click", () => {
+        let firstImgWidth = firstImg.clientWidth + 16; // getting first img width & adding 14 margin value
+        // if clicked icon is left, reduce width value from the carousel scroll left else add to it
+        carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+        setTimeout(() => showHideIcons(), 50); 
+    });
+});
+
+const showHideIcons = () => {
+    // showing and hiding prev/next icon according to carousel scroll left value
+    let scrollWidth = carousel.scrollWidth - carousel.clientWidth; // getting max scrollable width
+    arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "flex";
+    arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "flex";
 }
 
 carousel.addEventListener("mousedown", dragStart);
