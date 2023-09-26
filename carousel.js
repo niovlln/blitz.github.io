@@ -29,6 +29,7 @@ const dragStop = () => {
 
     if(!isDragging) return;
     isDragging = false;
+    autoSlide();
 }
 
 const autoSlide = () => {

@@ -15,14 +15,24 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 
 body {
-  min-height: 100vh;
   line-height: 1;
   text-rendering: optimizeSpeed;
 }
+
+h1 {
+  color : rgb(255, 196, 0);
+  font-size: 30px ;
+  font-family: 'Poppins'; 
+  padding-bottom: 1rem;
+}
+
+
+
 
 /* Desktop Navbar */
 
@@ -40,6 +50,7 @@ body {
     position: fixed;
     top: 0;
     z-index: 10;
+    transition: all 0.3s ease;
 }
 
 .logo { 
@@ -252,6 +263,9 @@ color: rgb(0, 119, 255);
   width: 100%;
   top:15vh;
   padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .slider-container {
@@ -314,34 +328,61 @@ color: rgb(0, 119, 255);
 
 .horizontal-lines {
   width: 97%;
-  border-top: 0.4rem solid rgb(0, 119, 255);
+  border-top: 0.3rem solid transparent;
+  border-radius: 5rem;
+}
+.vertical-lines {
+  height: 95%;
+  border-left: 0.3rem solid rgb(0, 119, 255);
   border-radius: 5rem;
 }
 
 /* Content #2 */
 #contentTwo{
-  width: 100%;
-  height: 40vmax;
-  margin-top: 15vh;
+  width: 97%;
+  height: 45vmax;
+  margin-top: 16vh;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  align-items: center;
-  justify-content: start;
   flex-direction: column;
 }
-.promo-container {
-  margin-top: 1rem;
+.location-container {
   background-color: white;
-  width: 98%;
-  height: 80vh;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
+}
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}.contact-box h1{
+  font-size: 25px;
+  color: black;
+}
+
+.contact-box i {
+  font-size: 2rem;
+}
+.socialmedia-btn {
+  font-family: 'Poppins';
+  height: 3rem;
+  width: 10rem;
+  border-radius: 2rem ;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.promo-container h1 {
-  color : rgb(255, 196, 0);
-  font-size: 50px ;
-  font-family: 'Poppins';
+  text-decoration: none;
+  color: black;
+  gap: 0.8rem;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2) ;;
+}.socialmedia-btn:hover{
+  color: rgb(0, 119, 255);
+}.socialmedia-btn:active {
+  background-color: rgb(0, 119, 255);
+  color: white;
 }
