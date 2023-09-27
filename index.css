@@ -22,6 +22,7 @@ html {
 body {
   line-height: 1;
   text-rendering: optimizeSpeed;
+  cursor: default;
 }
 
 h1 {
@@ -53,10 +54,11 @@ h1 {
     transition: all 0.3s ease;
 }
 
-.logo { 
+.logo a{ 
     font-family: 'Lilita One', cursive;;
     font-size: 2rem;
     color: rgb(0, 119, 255);
+    text-decoration: none;
 }.logo:hover{
     cursor: pointer;
 }
@@ -328,7 +330,7 @@ color: rgb(0, 119, 255);
 
 .horizontal-lines {
   width: 97%;
-  border-top: 0.3rem solid transparent;
+  border-top: 1rem solid transparent;
   border-radius: 5rem;
 }
 .vertical-lines {
@@ -341,7 +343,7 @@ color: rgb(0, 119, 255);
 #contentTwo{
   width: 97%;
   height: 45vmax;
-  margin-top: 16vh;
+  bottom: -100vh;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -359,7 +361,7 @@ color: rgb(0, 119, 255);
 .contact-box {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }.contact-box h1{
   font-size: 25px;
   color: black;
@@ -379,10 +381,27 @@ color: rgb(0, 119, 255);
   text-decoration: none;
   color: black;
   gap: 0.8rem;
-  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2) ;;
+  box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.2) ;;
 }.socialmedia-btn:hover{
   color: rgb(0, 119, 255);
 }.socialmedia-btn:active {
   background-color: rgb(0, 119, 255);
+  color: white;
+}
+
+/* Footer */
+
+footer {
+  height: 4vh;
+  width: 100%;
+  position: absolute;
+  background-color: rgb(0, 119, 255);
+  bottom: -106vh;
+  z-index: 3000;
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins';
+  font-size: 12px;
   color: white;
 }
