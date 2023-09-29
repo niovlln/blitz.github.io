@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr.Blitz</title>
+    <link rel="stylesheet" href="promo.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <nav id="desktop-navbar" >
+        <div class="logo"><a href="index.html">Mr.Blitz<span style="font-size: 1rem;" >&#174;</span></a></div>
+        <!--div class="menu-button" onclick="toggleDropdownMenu()">
+            <a> Menu </a>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div-->
+        <div class="menu-lists" id="menuDropdown">
+                <a href="#" >Paket Super Blitz</a>
+                <a href="#" >Paket Ayam Geprek</a>
+                <a href="#" >Paket Bento Oishii</a>
+                <a href="#" >See All Menu</a>
+        </div>
+        <div class="home-button">
+            <i class="fa-solid fa-house"></i>
+            <a href="index.html">Home</a>
+        </div>
+        <div class="promotion-button">
+            <i class="fa-solid fa-receipt"></i>
+            <a href="promo.html">Promo</a>
+        </div>
+        <div class="location-button">
+            <i class="fa-regular fa-map"></i>
+            <a href="index.html#lokasi">Lokasi</a>
+        </div>
+    </nav>
+
+    <nav id="mobile-navbar">
+        <div class="logo"><a href="index.html">Mr.Blitz<span style="font-size: 1rem;" >&#174;</span></a></div>
+    </nav>
+    <nav id="mobile-footbar">
+        <div class="icon-btn" onclick="toggleHamburgerMenu()">
+            <div class="icon nav-icon-5" >
+                <span></span>
+                <span></span>
+                <span></span>
+          </div>
+        </div>
+        <div class="hamburger-menu-lists">
+            <div class="hamburger-menu-wrapper">
+                <a href="#" onclick="toggleHamburgerMenu()" >Menu <i class="fa-solid fa-chevron-right"></i> </a>
+                <a href="promo.html" onclick="toggleHamburgerMenu()" >Promo <i class="fa-solid fa-chevron-right"></i></a>
+                <!--a href="#" >Kontak <i class="fa-solid fa-chevron-right"></i></a-->
+                <a href="index.html#contentTwo-mobile" onclick="toggleHamburgerMenu()">Lokasi <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+            <div class="hamburger-menu-footer"> 
+                <p> &#169; 2023 Mr.Blitz Indonesia</p>
+            </div>
+        </div>
+    </nav>
+
+
+</body>
+</html>
